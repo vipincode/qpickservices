@@ -1,0 +1,100 @@
+// ======================================================================
+//                      TESTIMONIALS
+// ======================================================================
+
+#testimonials {
+    margin-top: em(70px);
+}
+
+.testimonial {
+
+    &-heading {
+        text-align: center;
+
+        h2 {
+            font-size: em(41px);
+            font-weight: $font-weight--xl;
+            margin-bottom: em(34px, 41px);
+        }
+    }
+
+    &-content {
+        background: url("../../images/about-bg.jpg") no-repeat center / cover;
+        padding: 50px 0px;
+    }
+
+    &-cards {
+        text-align: center;
+        padding: em(20px);
+
+        img {
+            display: block;
+            margin: 0 auto;
+        }
+
+        article {
+            position: relative;
+
+            h3 {
+                font-size: em(15px);
+                font-weight: $font-weight--lg;
+                margin-bottom: 0px;
+                margin-top: em(15px, 15px);
+            }
+    
+            span {
+                font-size: em(13px);
+                font-weight: $font-weight--sm;
+                display: block;
+                margin-bottom: em(13px, 13px);
+            }
+    
+            p {
+                font-size: em(13px);
+                padding: 0 30px 20px;
+            }
+    
+            .quotes-image {
+                background: url('../../images/quotes.png') no-repeat center / cover;
+                width: em(69px);
+                height: em(60px);
+                position: absolute;
+                top: em(28px);
+                left: em(30px);
+                opacity: 0.89;
+            }
+        }
+
+    }
+
+}
+
+.swiper4 {
+    background-color: $qpick__white;
+    width: 50%;
+    margin: 0 auto;
+    border-radius: $br-radius;
+
+    .swiper-button-prev:after, 
+    .swiper-button-next:after {
+        color: $qpick__black;
+        font-size: em(20px);
+    }
+
+    .swiper-button-prev, 
+    .swiper-container-rtl .swiper-button-next {
+        left: 0;
+        @include arrows-prev($bg-color: $qpick__white, $br-radius: $br-radius);
+    }
+
+    .swiper-button-next, 
+    .swiper-container-rtl .swiper-button-prev {
+        right: 0;
+        @include arrows-next($bg-color: $qpick__white, $br-radius: $br-radius);
+    }
+
+    .swiper-pagination-bullet-active {
+        background-color: $primary__color;
+    }
+
+}

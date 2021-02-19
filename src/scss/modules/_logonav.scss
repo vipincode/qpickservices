@@ -1,0 +1,68 @@
+// ==========================================================
+//             BOTTOM NAV 
+// ==========================================================
+
+.botton-nav {
+    background-color: $qpick__white;
+    nav {
+        padding: 5px 0px;
+
+        li {
+            display: block;
+            @include mq('md') {
+                display: inline-block;
+                margin-left: em(15px);
+            }
+        }
+
+        a {
+            display: block;
+            font-size: em(17px);
+            font-weight: $font-weight--lg;
+            color: $qpick__black;
+            padding: 7px 0px;
+            transition: color 0.4s ease-in-out;
+            &:hover {
+                color: $secondary__color;
+            }
+        }
+
+        form {
+            input[type="text"] {
+                border: none;
+                outline: none;
+                border-bottom: 1px solid $border;
+                padding: 10px 10px 10px 30px;
+                font-size: em(14px);
+                width: em(500px);
+                margin-left: em(100px, 14px);
+                background-image: url('../../images/search-icon.png');
+                background-repeat: no-repeat;
+                background-size: 21px 21px;
+                background-position: 7px 8px;
+
+                &::placeholder {
+                    color: $border;
+                }
+            }
+        }
+
+        @include mq('md') {
+            @include flexy($just: space-between, $align: center);
+        }
+
+    }
+}
+
+// ==========================================================
+//             SEARCH AUTO COMPLETE
+// ==========================================================
+
+.ui-autocomplete {
+    background-color: $qpick__white;
+    z-index: 99;
+    padding: em(10px); 
+    li {
+        padding: 6px 0px;
+    }
+}

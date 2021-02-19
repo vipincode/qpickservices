@@ -1,0 +1,49 @@
+// ======================================================================
+//                         SWIPER STYLE
+// ======================================================================
+
+.swiper2 {
+    background-color: $qpick__white;
+    padding: em(20px);
+    margin-top: em(80px);
+    margin-bottom: em(80px);
+    border-radius: $br-radius;
+    border: 1px solid rgba($qpick__black, 0.07);
+    .swiper-slide {
+        img {
+            display: block;
+            margin: 0 auto;
+        }
+        span {
+            display: block;
+            text-align: center;
+            font-size: em(13px);
+            font-weight: $font-weight--lg;
+            margin-top: em(10px, 13px);
+            margin-bottom: em(20px, 13px);
+        }
+    }
+
+    .swiper-button-prev:after, 
+    .swiper-button-next:after {
+        color: $qpick__black;
+        font-size: em(20px);
+    }
+
+    .swiper-button-prev, 
+    .swiper-container-rtl .swiper-button-next {
+        left: 0;
+        @include arrows-prev($bg-color: $qpick__white, $br-radius: $br-radius);
+    }
+
+    .swiper-button-next, 
+    .swiper-container-rtl .swiper-button-prev {
+        right: 0;
+        @include arrows-next($bg-color: $qpick__white, $br-radius: $br-radius);
+    }
+
+    .swiper-pagination-bullet-active {
+        background-color: $primary__color;
+    }
+
+}

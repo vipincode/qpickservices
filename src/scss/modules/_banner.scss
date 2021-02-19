@@ -1,0 +1,66 @@
+// ==================================================
+//        SWIPER SETTINGS
+// ==================================================
+
+.swiper1 {
+    .banner {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: em(35px) 0px;
+
+        article {
+            position: relative;
+            width: 75%;
+            color: $qpick__accent;
+            z-index: 1;
+
+            h1 {
+                font-size: em(62px);
+                margin-bottom: em(5px, 32px);
+                text-transform: uppercase;
+            }
+
+            h2 {
+                font-size: em(62px);
+                font-weight: $font-weight--sm;
+                line-height: em(30px, 32px);
+                margin-bottom: em(15px, 62px);
+            }
+
+            p {
+                font-size: em(18px);
+                font-weight: $font-weight--sm;
+            }
+
+            .btn {
+                display: inline-block;
+                text-transform: uppercase;
+                margin-top: em(30px, 18px);
+            }
+        }
+
+        &::after {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            content: '';
+            display: block;
+            background-color: rgba($color: $qpick__black, $alpha: 0.35);
+        }
+
+    }
+
+    .swiper-pagination-bullet {
+        background-color: $qpick__accent;
+        opacity: 0.75;;
+    }
+
+    .swiper-pagination-bullet.swiper-pagination-bullet-active {
+        background-color: $qpick__white;
+    }
+}
+
+

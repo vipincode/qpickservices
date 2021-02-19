@@ -1,0 +1,173 @@
+// ====================================================================
+//                       FOOTER STYLE
+// ====================================================================
+
+#footer {
+    background-color: $qpick__black;
+    padding-top: em(30px);
+}
+
+.footer {
+    color: $qpick__accent;
+
+    &-nav {
+        ul {
+            @include flexy($align: center);
+
+            li {
+                font-size: em(18px);
+                font-weight: $font-weight--sm;
+                margin-right: em(25px, 18px);
+
+                a {
+                    color: $qpick__accent;
+                }
+
+                .btn {
+                    font-size: em(14px);
+                    font-weight: $font-weight--sm;
+                    padding: 3px 15px;
+                    line-height: em(30px, 18px);
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+
+    &-content {
+        margin-top: em(30px);
+        a {
+            display: block;
+            padding: 6px 0px;
+            color: $qpick__accent;
+            font-size: em(14px);
+            font-weight: $font-weight--xs;
+        }
+
+        h3 {
+            font-size: em(28px);
+            font-weight: $font-weight--md;
+            margin-bottom: em(12px, 28px);
+        }
+
+        .ft-items--links {
+            a {
+                position: relative;
+                padding-left: em(18px);
+            }
+
+            a::before {
+                position: absolute;
+                top: em(12px);
+                left: 0;
+                display: block;
+                content: '';
+                width: 10px;
+                height: 10px;
+                background-color: $secondary__color;
+            }
+        }
+    }
+
+    &-socials {
+        ul {
+            @include flexy($just: space-between);
+        }
+    }
+
+    &-address {
+        p {
+            font-size: em(15px);
+            font-weight: $font-weight--sm;
+            margin-bottom: em(18px, 15px);
+        }
+    }
+
+    &-logo {
+        text-align: center;
+        margin-top: em(25px);
+
+        img {
+            display: block;
+            margin: 0 auto;
+        }
+    
+        ul {
+            margin-top: em(20px);
+            li {
+                display: inline-block;
+                padding: 8px 15px;
+                a {
+                    color: $qpick__accent;
+                    font-size: em(12px);
+                    font-weight: $font-weight--xs;
+                    transition: color $transition ease-in-out;
+                    &:hover {
+                        color: $secondary__color;
+                    }
+                }
+            }
+        }
+    }
+
+    &-news {
+        margin-top: em(50px);
+        text-align: center;
+
+        h4 {
+            font-weight: $font-weight--md;
+            font-size: em(18px);
+            margin-bottom: em(6px, 18px);
+        }
+
+        p {
+            font-size: em(13px);
+            font-weight: $font-weight--xs;
+            margin-bottom: em(8px, 13px);
+        }
+
+        form {
+            @include flexy();
+            margin-top: em(15px);
+
+            input[type="text"] {
+                flex: 1 70%;
+                border: none;
+                outline: none;
+                padding: 6px 8px;
+                font-size: em(13px);
+                background: transparent;
+                border: 1px solid $border;
+                color: $qpick__accent;
+                border-top-left-radius: $br-radius;
+                border-bottom-left-radius: $br-radius;
+                border-right: none;
+            }
+
+            input[type="submit"] {
+                flex-basis: 30%;
+                border: none;
+                outline: none;
+                background-color: $qpick__red;
+                color: $qpick__white;
+                padding: 6px 8px;
+                font-size: em(13px);
+                font-weight: $font-weight--sm;
+                border-top-right-radius: $br-radius;
+                border-bottom-right-radius: $br-radius;
+                border: 1px solid $qpick__red;
+                cursor: pointer;
+            }
+        }
+    }
+
+}
+
+.ft-copyrights {
+    text-align: center;
+    padding: em(10px, 12px);
+    font-size: em(12px);
+    color: $qpick__accent;
+    font-weight: $font-weight--xs;
+    letter-spacing: $letter-space;
+}

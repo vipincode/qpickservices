@@ -1,0 +1,74 @@
+// ==========================================================================
+//                            BASE STYLES
+// ==========================================================================
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $font-family--primary;
+    font-size: $base-font;
+    font-weight: $font-weight--sm;
+    line-height: $base--line / $base-font;
+    color: $qpick__black;
+    background-color: $qpick__grey;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 0px;
+}
+
+h1 {
+    font-size: em(32px);
+    margin-bottom: em(20px, 32px);
+    line-height: em(30px, 32px);
+    font-weight: $font-weight--xxl;
+}
+
+h2 {
+    font-size: em(25px);
+    margin-bottom: em(20px, 25px);
+    line-height: em(30px, 25px);
+    font-weight: $font-weight--xl;
+}
+
+h3 {
+    font-size: em(22px);
+    margin-bottom: em(20px, 22px);
+    line-height: em(30px, 22px);
+    font-weight: $font-weight--lg;
+}
+
+h4 {
+    font-size: em(20px);
+    margin-bottom: em(20px, 20px);
+    line-height: em(30px, 20px);
+    font-weight: $font-weight--md;
+}
+
+p {
+    margin: 0px;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: $qpick__black;
+    text-decoration: none;
+    display: block;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+}

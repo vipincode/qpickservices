@@ -1,0 +1,43 @@
+// =====================================================================
+//                                SERVICES NAV
+// =====================================================================
+
+.service {
+    background: linear-gradient(90deg, $primary__color, $secondary__color);
+    padding: 15px 0px;
+
+    &-main {
+        ul {
+            @include flexy($wrap: wrap, $just: space-between);
+
+            li {
+                // flex: 0 1 per-line(12);
+                text-align: center;
+                a {
+                    color: $qpick__accent;
+                }
+
+                img {
+                    width: 29px;
+                    display: block;
+                    margin: 0 auto;
+                }
+
+                .toggle-btn {
+                    img {
+                        width: 50px;
+                    }
+                }
+                
+                span {
+                    font-size: em(12px);
+                    display: block;
+                    margin-top: em(5px, 13px);
+                }
+            }
+
+        }
+    }
+
+
+}

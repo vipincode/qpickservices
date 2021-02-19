@@ -1,0 +1,73 @@
+// ======================================================================
+//                        QUICK LINKS
+// ======================================================================
+
+#services {
+    position: relative;
+    height: 650px;
+    &::after {
+        content: '';
+        display: block;
+        background-image: url('../../images/services-bg.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 70%;
+        height: 100%;
+    }
+}
+
+.services {
+    position: relative;
+    .services-items {
+        position: absolute;
+        z-index: 9;
+        width: 100%;
+        left: 0;
+        padding: 50px 0px;
+    }
+
+    .services-heading {
+        color: $qpick__white;
+        margin-bottom: em(30px);
+        width: 55%;
+
+        h2 {
+            font-size: em(28px);
+            text-transform: uppercase;
+            text-transform: uppercase;
+            font-weight: $font-weight--lg;
+            margin-bottom: em(12px, 28px);
+        }
+
+        p {
+            font-size: em(15px);
+            font-weight: $font-weight--sm;
+        }
+    }
+
+    &-item {
+        background-color: $qpick__white;
+        padding: em(15px);
+        margin-bottom: em(15px);
+        border-radius: $br-radius;
+        border: 1px solid $border;
+        box-shadow: 0 0 10px 1px rgba($qpick__black, 0.15);
+
+        img {
+            display: block;
+            margin: 0 auto;
+            width: em(42px)
+        }
+
+        h4 {
+            font-size: em(15px);
+            font-weight: $font-weight--lg;
+            text-align: center;
+            margin-top: em(15px, 15px);
+        }
+    }
+}
