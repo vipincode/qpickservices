@@ -9,10 +9,26 @@
 }
 
 .callus {
-    width: 75%;
     margin: 0 auto;
+
     @include mq('md') {
-        @include flexy($just: space-between, $align: center);
+        @include flexy($just: space-between, $align: center, $wrap: wrap);
+    }
+
+    @include mq('xl') {
+        width: 75%;
+    }
+
+    &--left {
+        @include mq('md') {
+            flex: 1 80%;
+        }
+    }
+
+    &--right {
+        @include mq('md') {
+            flex-basis: 20%;
+        }
     }
 
     h4 {
@@ -20,10 +36,16 @@
         color: $qpick__accent;
         font-size: em(21px);
         font-weight: $font-weight--sm;
+
+        @include mq('xs') {
+            font-size: em(18px);
+            line-height: em(34px, 18px);
+        }
     }
 
     .btn {
         text-transform: uppercase;
+        text-align: center;
     }
 }
 

@@ -13,46 +13,63 @@
         font-size: em(42px);
         text-transform: uppercase;
         font-weight: $font-weight--xxl;
+        @include mq('xs') {
+            font-size: em(32px);
+        }
     }
 
     &-location {
         width: 75%;
         margin: 0 auto;
+
+        @include mq('md') {
+            width: 95%;
+        }
+        @include mq('xl') {
+            width: 75%;
+        }
     }
 
     &--address {
         text-align: center;
         img {
             margin:2em auto 1em;
+            @include mq('xs') {
+                width: em(42px);
+                margin: 10px auto 12px;
+            }
         }
 
         p {
             font-weight: $font-weight--sm;
             font-size: em(15px);
+            @include mq('xs') {
+                font-size: em(14px);
+            }
         }
 
     }
 
     &-contacts {
         margin-top: em(50px);
-        height: 500px;
         border-radius: $br-radius;
-        @include mq('md') {
-            @include flexy($wrap: wrap);
-        }
-        .inq--section {
-            flex: 1 per-line(2);
-        }
     }
 
     &--map {
         height: 100%;
         overflow: hidden;
+        @include mq('xs') {
+            height: em(400px);
+        }
     }
 
     &--form {
         background-color: $qpick__white;
+        padding: em(15px);
+        
+       @include mq('md') {
         padding: em(30px);
+       }
 
         h3 {
             font-size: em(30px);
@@ -79,11 +96,14 @@
         }
 
         .btn {
+            width: 100%;
             display: inline-block;
             text-transform: uppercase;
-            width: em(200px);
             font-size: em(20px);
             font-weight: $font-weight--md;
+            @include mq('sm') {
+                width: em(200px);
+            }
         }
     }
 

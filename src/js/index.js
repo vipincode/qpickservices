@@ -4,8 +4,7 @@
 
 import Swiper from 'swiper/bundle';
 const swiper1 = new Swiper('.swiper1', {
-    // speed: 300,
-    // effect: 'fade',
+    speed: 600,
     autoplay: {
         delay: 2500,
         disableOnInteraction: false,
@@ -32,21 +31,25 @@ const swiper2 = new Swiper('.swiper2', {
         clickable: true,
     },
     breakpoints: {
-        '@0.00': {
-            slidesPerView: 1,
-            spaceBetween: 10,
-        },
-        '@0.75': {
-            slidesPerView: 2,
+        576: {
+            slidesPerView: 3,
             spaceBetween: 20,
         },
-        '@1.00': {
-            slidesPerView: 3,
-            spaceBetween: 40,
+        768: {
+            slidesPerView: 4,
+            spaceBetween: 30,
         },
-        '@1.50': {
+        1024: {
+            slidesPerView: 5,
+            spaceBetween: 20,
+        },
+        1280: {
             slidesPerView: 7,
-            spaceBetween: 18,
+            spaceBetween: 25,
+        },
+        1920: {
+            slidesPerView: 10,
+            spaceBetween: 25,
         },
     }
 });
@@ -54,6 +57,7 @@ const swiper2 = new Swiper('.swiper2', {
 const swiper3 = new Swiper('.swiper3', {
     slidesPerView: 1,
     spaceBetween: 10,
+    slidesPerGroup: 1,
 
     navigation: {
         nextEl: '.swiper-button-next3',
@@ -64,27 +68,31 @@ const swiper3 = new Swiper('.swiper3', {
         clickable: true,
     },
     breakpoints: {
-        '@0.00': {
+        576: {
             slidesPerView: 1,
             spaceBetween: 10,
+            slidesPerGroup: 1,
         },
-        '@0.75': {
+        768: {
             slidesPerView: 2,
             spaceBetween: 20,
+            slidesPerGroup: 2,
         },
-        '@1.00': {
-            slidesPerView: 3,
+        1024: {
+            slidesPerView: 2,
             spaceBetween: 40,
+            slidesPerGroup: 2,
         },
-        '@1.50': {
+        1280: {
             slidesPerView: 3,
             spaceBetween: 30,
-            slidesPerGroup: 1,
+            slidesPerGroup: 2,
         },
     }
 });
 
 const swiper4 = new Swiper('.swiper4', {
+    slidesPerView: 1,
     cssMode: true,
     autoplay: {
         delay: 2500,
@@ -165,7 +173,7 @@ btnTop.addEventListener('click', () => {
     targets: scrollElement,
     scrollTop: 0,
     duration: 500,
-    easing: 'easeInOutQuad'
+    easing: 'easeInOutQuad',
   });
 });
 

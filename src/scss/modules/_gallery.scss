@@ -4,6 +4,9 @@
 
 #gallery {
     margin-top: em(20px);
+    @include mq('xs') {
+        margin-top: em(35px);
+    }
 }
 
 .gallery {
@@ -14,11 +17,19 @@
 
     &-text {
         position: absolute;
-        bottom: em(8px);
+        top: em(-16px);
         left: 0;
         right: 0;
         padding: em(15px);
         color: $qpick__white;
+
+        @include mq('lg') {
+            top: em(16px);
+        }
+
+        @include mq('xl') {
+            top: em(-16px);
+        }
 
         h3 {
             font-size: em(20px);
@@ -38,12 +49,21 @@
             font-size: em(14px);
             font-weight: $font-weight--sm;
             text-transform: uppercase;
+            @include mq('xs') {
+                padding: 5px 12px;
+            }
         }
     }
 }
 
 .swiper3 {
-    height: em(260px);
+    height: em(250px);
+    @include mq('lg') {
+        height: em(300px);
+    }
+    @include mq('xl') {
+        height: em(250px);
+    }
     .swiper-button-prev, 
     .swiper-container-rtl .swiper-button-next {
         left: auto;

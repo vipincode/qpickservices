@@ -12,7 +12,7 @@
 
     &-nav {
         ul {
-            @include flexy($align: center);
+            @include flexy($align: center, $wrap: wrap);
 
             li {
                 font-size: em(18px);
@@ -36,6 +36,9 @@
 
     &-content {
         margin-top: em(30px);
+        @include mq('xs') {
+            margin-top: 0px;
+        }
         a {
             display: block;
             padding: 6px 0px;
@@ -48,12 +51,21 @@
             font-size: em(28px);
             font-weight: $font-weight--md;
             margin-bottom: em(12px, 28px);
+            @include mq('xs') {
+                margin-top: em(25px, 28px);
+                font-size: em(25px);
+                margin-bottom: em(12px, 25px);
+            }
         }
 
         .ft-items--links {
             a {
                 position: relative;
                 padding-left: em(18px);
+
+                span {
+                    color: $secondary__color;
+                }
             }
 
             a::before {
@@ -70,9 +82,50 @@
     }
 
     &-socials {
+        @include mq('xs') {
+            margin-top: em(35px);
+            border-top: 1px dashed $border;
+            padding: 15px 0 0 0;
+        }
+
+        @include mq('md') {
+            margin-top: em(30px);
+        }
+
+        @include mq('xl') {
+            margin-top: 0;
+        }
+
         ul {
             @include flexy($just: space-between);
+
+            @include mq('xs') {
+                @include flexy($just: center);
+            }
+
+           li {
+              @include mq('xs') {
+                margin-right: em(12px);
+              }
+                img {
+                    @include mq('xs') {
+                        width: em(42px);
+                    }
+                }
+           }
+
         }
+    }
+
+    &-implinks {
+        @include mq('md') {
+            margin-top: em(30px);
+        }
+
+        @include mq('xl') {
+            margin-top: 0;
+        }
+        
     }
 
     &-address {
@@ -90,6 +143,11 @@
         img {
             display: block;
             margin: 0 auto;
+            @include mq('xs') {
+                width: em(180px);
+                margin-top: em(50px);
+                margin-bottom: em(50px);
+            }
         }
     
         ul {
@@ -170,4 +228,7 @@
     color: $qpick__accent;
     font-weight: $font-weight--xs;
     letter-spacing: $letter-space;
+    @include mq('xs') {
+        margin-top: em(30px);
+    }
 }

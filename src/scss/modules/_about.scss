@@ -30,6 +30,10 @@
             font-size: em(17px);
             font-weight: $font-weight--sm;
             line-height: em(32px, 17px);
+            @include mq('xs') {
+                font-size: em(16px);
+                line-height: em(30px, 16px);
+            }
         }
 
         .btn {

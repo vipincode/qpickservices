@@ -4,6 +4,10 @@
 .tp-wrap {
     background-color: $qpick__black;
     color: $qpick__accent;
+
+    @include mq('xxl') {
+        padding: 8px 0px;
+    }
 }
 
 .top-nav {
@@ -20,33 +24,49 @@
             }
             
             li.tp-phone {
-                @include before-images {
+                @include before-images($width: 18px, $height: 18px) {
                     background: transparent url('../../images/small-call.svg') no-repeat;
+                }
+
+                @include mq('lg') {
+                    @include before-images($width:22px, $height:22px);
                 }
             }
 
             li.tp-email {
-                @include before-images {
+                @include before-images($width: 18px, $height: 18px) {
                     background: transparent url('../../images/small-emails.svg') no-repeat;
                     top: 6px;
+                }
+                @include mq('lg') {
+                    @include before-images($width:22px, $height:22px);
                 }
             }
 
             li.tp-money {
-                @include before-images {
+                @include before-images($width: 18px, $height: 18px) {
                     background: transparent url('../../images/small-money.svg') no-repeat;
+                }
+                @include mq('lg') {
+                    @include before-images($width:22px, $height:22px);
                 }
             }
 
             li.tp-wallet {
-                @include before-images {
+                @include before-images($width: 18px, $height: 18px) {
                     background: transparent url('../../images/small-wallet.svg') no-repeat;
+                }
+                @include mq('lg') {
+                    @include before-images($width:22px, $height:22px);
                 }
             }
 
             li.tp-login {
-                @include before-images {
+                @include before-images($width: 18px, $height: 18px) {
                     background: transparent url('../../images/small-user.svg') no-repeat;
+                }
+                @include mq('md') {
+                    @include before-images($width:22px, $height:22px);
                 }
             }
 
@@ -54,12 +74,18 @@
         a {
             color: $qpick__accent;
             display: block;
-            font-size: em(13px);
+            font-size: em(11px);
             padding: 5px 0px;
             font-weight: $font-weight--xs;
-            padding-left: em(28px, 13px);
+            padding-left: em(28px, 11px);
+            @include mq('lg') {
+                font-size: em(13px);
+                padding-left: em(28px, 13px);
+            }
         }
     }
+    
+    display: none;
     @include mq('md') {
         @include flexy($just: space-between);
     }

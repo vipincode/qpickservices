@@ -18,26 +18,50 @@
                 }
 
                 img {
-                    width: 29px;
+                    width: 24px;
                     display: block;
                     margin: 0 auto;
+
+                    @include mq('lg') {
+                        width: 26px;
+                    }
+
+                    @include mq('xl') {
+                        width: 29px;
+                    }
                 }
 
                 .toggle-btn {
                     img {
-                        width: 50px;
+                        width: 40px;
+
+                        @include mq('xl') {
+                            width: 50px;
+                        }
                     }
                 }
                 
                 span {
-                    font-size: em(12px);
+                    font-size: em(8px);
                     display: block;
-                    margin-top: em(5px, 13px);
+                    margin-top: em(5px, 10px);
+                    @include mq('lg') {
+                        font-size: em(10px);
+                        margin-top: em(5px, 10px);
+                    }
+                    @include mq('xl') {
+                        font-size: em(12px);
+                        margin-top: em(5px, 12px);
+                    }
                 }
             }
 
         }
     }
 
+    display: none;
+    @include mq('lg') {
+        display: block;
+    }
 
 }

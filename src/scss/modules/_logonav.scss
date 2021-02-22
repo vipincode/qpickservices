@@ -7,23 +7,43 @@
     nav {
         padding: 5px 0px;
 
-        li {
-            display: block;
-            @include mq('md') {
-                display: inline-block;
-                margin-left: em(15px);
-            }
+        @include mq('xs') {
+            padding: 15px 0 0;
         }
 
-        a {
-            display: block;
-            font-size: em(17px);
-            font-weight: $font-weight--lg;
-            color: $qpick__black;
-            padding: 7px 0px;
-            transition: color 0.4s ease-in-out;
-            &:hover {
-                color: $secondary__color;
+        ul {
+            li {
+                display: block;
+                @include mq('md') {
+                    display: inline-block;
+                    margin-left: em(15px);
+                }
+            }
+    
+            a {
+                display: block;
+                font-size: em(14px);
+                font-weight: $font-weight--lg;
+                color: $qpick__black;
+                padding: 7px 0px;
+                transition: color 0.4s ease-in-out;
+                &:hover {
+                    color: $secondary__color;
+                }
+
+                @include mq('lg') {
+                    font-size: em(16px);
+                }
+
+                @include mq('xl') {
+                    font-size: em(17px);
+                }
+            }
+
+            display: none;
+
+            @include mq('lg') {
+                display: block;
             }
         }
 
@@ -33,9 +53,8 @@
                 outline: none;
                 border-bottom: 1px solid $border;
                 padding: 10px 10px 10px 30px;
-                font-size: em(14px);
-                width: em(500px);
-                margin-left: em(100px, 14px);
+                font-size: em(10px);
+                width: 100%;
                 background-image: url('../../images/search-icon.png');
                 background-repeat: no-repeat;
                 background-size: 21px 21px;
@@ -44,11 +63,47 @@
                 &::placeholder {
                     color: $border;
                 }
+
+                @include mq('xs') {
+                    margin-bottom: em(20px, 14px);
+                }
+
+                @include mq('md') {
+                    width: em(250px, 12px);
+                    font-size: em(12px);
+                }
+
+                @include mq('lg') {
+                    width: em(265px, 12px);
+                    font-size: em(12px);
+                }
+
+                @include mq('xl') {
+                    font-size: em(14px);
+                    width: em(500px);
+                    margin-left: em(100px, 14px);
+                }
             }
         }
 
         @include mq('md') {
             @include flexy($just: space-between, $align: center);
+        }
+
+        .site-logo {
+            display: inline-block;
+            img {
+                @include mq('xs') {
+                    width: em(120px);
+                    margin-bottom: em(25px);
+                }
+                @include mq('md') {
+                    width: em(120px);
+                }
+                @include mq('xl') {
+                    width: auto;
+                }
+            }
         }
 
     }

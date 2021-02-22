@@ -10,4 +10,9 @@
     margin-top: em(20px, 18px);
     margin-bottom: em(15px, 18px);
     @include bg-colors($ui-colors);
+
+    @include mq('xs') {
+        padding: 8px 12px;
+        font-size: em(15px);
+    }
 }
