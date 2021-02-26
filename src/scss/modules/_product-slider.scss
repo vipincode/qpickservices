@@ -13,6 +13,9 @@
         img {
             display: block;
             margin: 0 auto;
+            @include mq('xs') {
+                width: 85px;
+            }
         }
         span {
             display: block;

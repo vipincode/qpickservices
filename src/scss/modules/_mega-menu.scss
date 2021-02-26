@@ -1,0 +1,58 @@
+// =============================================================
+//            MEGA MENU
+// =============================================================
+
+.service-main {
+    position: relative;
+}
+.service_menu__inner {
+    position: absolute;
+    top: em(54px);
+    left: 0;
+    width: 100%;
+    background-color: $qpick__white;
+    padding: em(15px);
+    border-radius: em(2px);
+    z-index: 99;
+    display: none;
+   
+    ul {
+        flex-direction: column;
+        -ms-flex-direction: column;
+        li {
+            display: block;
+            text-align: left;
+            a {
+               color: $qpick__black; 
+               display: block;
+               font-size: em(15px);
+               padding: 5px 0px;
+            }
+        }
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: -15px;
+        right: 11px;
+        display: block;
+        border-left: 15px solid transparent;
+        border-right: 15px solid transparent;
+        border-bottom: 25px solid $qpick__white;
+    }
+}
+
+.service_menu:hover .service_menu__inner {
+    display: block;
+    animation: fadeBottom 0.4s ease-in-out;
+}
+
+@keyframes fadeBottom {
+    from {
+        opacity: 0.5;
+    }
+    to {
+        opacity: 1;
+    }
+}

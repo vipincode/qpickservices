@@ -22,6 +22,10 @@ const swiper2 = new Swiper('.swiper2', {
     slidesPerGroup: 2,
     loop: true,
     loopFillGroupWithBlank: true,
+    autoplay: {
+        delay: 3500,
+        disableOnInteraction: false,
+    },
     navigation: {
         nextEl: '.swiper-button-next2',
         prevEl: '.swiper-button-prev2',
@@ -36,20 +40,24 @@ const swiper2 = new Swiper('.swiper2', {
             spaceBetween: 20,
         },
         768: {
-            slidesPerView: 4,
+            slidesPerView: 5,
             spaceBetween: 30,
+            slidesPerGroup: 2,
         },
         1024: {
-            slidesPerView: 5,
+            slidesPerView: 6,
             spaceBetween: 20,
+            slidesPerGroup: 2,
         },
         1280: {
-            slidesPerView: 7,
+            slidesPerView: 8,
             spaceBetween: 25,
+            slidesPerGroup: 2,
         },
         1920: {
             slidesPerView: 10,
             spaceBetween: 25,
+            slidesPerGroup: 2,
         },
     }
 });
@@ -115,6 +123,7 @@ const swiper4 = new Swiper('.swiper4', {
 
 import $ from "jquery";
 import 'jquery-ui/ui/widgets/autocomplete';
+import 'jquery-ui/ui/widgets/accordion';
 
 var availableTags = [
     "Adhar card",
@@ -150,7 +159,6 @@ var availableTags = [
     }
   });
 
-
 // ===================================================================
 //                     BACK TO TOP 
 // ===================================================================
@@ -168,13 +176,49 @@ window.onscroll = () => {
     }
 };
 
-btnTop.addEventListener('click', () => {
-  anime({
-    targets: scrollElement,
-    scrollTop: 0,
-    duration: 500,
-    easing: 'easeInOutQuad',
-  });
+if(btnTop) {
+    btnTop.addEventListener('click', () => {
+        anime({
+            targets: scrollElement,
+            scrollTop: 0,
+            duration: 500,
+            easing: 'easeInOutQuad',
+        });
+    });
+}
+
+// ===================================================================
+//                     MOBILE NAV 
+// ===================================================================
+
+$(".hamburger").on("click", function () {
+    $(this).toggleClass("is-active");
+    $('.overlay').toggleClass('overlay__panel');
+    $(".mobile").animate({
+        width: [ "toggle", "swing" ],
+        opacity: "toggle",
+    }, 300, function() {
+        $(".mobile").toggleClass("js_mob__open");
+    });
 });
 
+$(".overlay").on("click", function(e) {
+    if(e.target == this) {
+        $(".hamburger").removeClass("is-active");
+        $(this).removeClass('overlay__panel');
+        $(".mobile").removeClass("js_mob__open");
+        $(".mobile").removeAttr('style');
+    }
+});
 
+// ===================================================================
+//                     ACCORDIAN
+// ===================================================================
+
+$(".qpk__menu").on("click", function() {
+    $(this).toggleClass("active");
+    $(this).next(".menu__panel").animate({
+        height: 'toggle',
+    }, 500, function() {
+    });
+});

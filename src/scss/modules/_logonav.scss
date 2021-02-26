@@ -53,7 +53,6 @@
                 outline: none;
                 border-bottom: 1px solid $border;
                 padding: 10px 10px 10px 30px;
-                font-size: em(10px);
                 width: 100%;
                 background-image: url('../../images/search-icon.png');
                 background-repeat: no-repeat;
@@ -69,17 +68,15 @@
                 }
 
                 @include mq('md') {
-                    width: em(250px, 12px);
-                    font-size: em(12px);
+                    width: em(260px, 14px);
+                    font-size: em(14px);
                 }
 
                 @include mq('lg') {
-                    width: em(265px, 12px);
-                    font-size: em(12px);
+                    width: em(270px, 14px);
                 }
 
                 @include mq('xl') {
-                    font-size: em(14px);
                     width: em(500px);
                     margin-left: em(100px, 14px);
                 }
@@ -94,11 +91,11 @@
             display: inline-block;
             img {
                 @include mq('xs') {
-                    width: em(120px);
-                    margin-bottom: em(25px);
+                    width: em(145px);
+                    margin-bottom: em(15px);
                 }
                 @include mq('md') {
-                    width: em(120px);
+                    width: em(145px);
                 }
                 @include mq('xl') {
                     width: auto;

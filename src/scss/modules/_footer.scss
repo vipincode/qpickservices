@@ -187,13 +187,17 @@
         form {
             @include flexy();
             margin-top: em(15px);
+            @include mq('xs') {
+                margin: 20px auto 0;
+            }
 
             input[type="text"] {
                 flex: 1 70%;
+                width: 100%;
                 border: none;
                 outline: none;
-                padding: 6px 8px;
-                font-size: em(13px);
+                padding: 8px 8px;
+                font-size: em(14px);
                 background: transparent;
                 border: 1px solid $border;
                 color: $qpick__accent;
@@ -208,8 +212,8 @@
                 outline: none;
                 background-color: $qpick__red;
                 color: $qpick__white;
-                padding: 6px 8px;
-                font-size: em(13px);
+                padding: 8px 8px;
+                font-size: em(14px);
                 font-weight: $font-weight--sm;
                 border-top-right-radius: $br-radius;
                 border-bottom-right-radius: $br-radius;

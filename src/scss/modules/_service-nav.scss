@@ -29,6 +29,10 @@
                     @include mq('xl') {
                         width: 29px;
                     }
+
+                    @include mq('xxl') {
+                        width: 35px;
+                    }
                 }
 
                 .toggle-btn {
@@ -50,8 +54,12 @@
                         margin-top: em(5px, 10px);
                     }
                     @include mq('xl') {
-                        font-size: em(12px);
-                        margin-top: em(5px, 12px);
+                        font-size: em(13px);
+                        margin-top: em(5px, 13px);
+                    }
+                    @include mq('xxl') {
+                        font-size: em(17px);
+                        margin-top: em(5px, 17px);
                     }
                 }
             }
