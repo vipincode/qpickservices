@@ -1,0 +1,18 @@
+.btn {
+    border: none;
+    outline: none;
+    padding: 8px 20px;
+    border-radius: $br-radius;
+    color: $qpick__accent;
+    font-size: em(17px);
+    font-weight: $font-weight--md;
+    cursor: pointer;
+    margin-top: em(20px, 18px);
+    margin-bottom: em(15px, 18px);
+    @include bg-colors($ui-colors);
+
+    @include mq('xs') {
+        padding: 8px 12px;
+        font-size: em(15px);
+    }
+}

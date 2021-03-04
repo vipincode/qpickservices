@@ -1,0 +1,39 @@
+// ================================================================
+//                 JQUERY UI CUSTOMISATION
+// ================================================================
+
+.ui-icon {
+    width: 17px;
+    height: 16px;
+}
+
+.ui-icon {
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: -.25em;
+    text-indent: -99999px;
+    overflow: hidden;
+    background-repeat: no-repeat;
+}
+
+.ui-icon, .ui-widget-content .ui-icon {
+    background-image: url('../../images/jq-ui--icons.png');
+}
+
+.ui-icon-triangle-1-e {
+    background-position: -66px 4px;
+    position: absolute;
+    right: -13px;
+    top: 12px;
+}
+
+.ui-icon-triangle-1-s {
+    background-position: 0px 5px;
+    position: absolute;
+    right: -13px;
+    top: 12px;
+}
+
+.ui-accordion .ui-accordion-content {
+    padding: em(15px);
+}

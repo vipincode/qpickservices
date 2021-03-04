@@ -1,0 +1,141 @@
+// ====================================================================
+//                       CONTACT US
+// ====================================================================
+
+#inquiry {
+    margin-top: em(80px);
+    margin-bottom: em(80px);
+}
+
+.inquiry {
+    h2 {
+        text-align: center;
+        font-size: em(42px);
+        text-transform: uppercase;
+        font-weight: $font-weight--xxl;
+        @include mq('xs') {
+            font-size: em(32px);
+        }
+    }
+
+    &-location {
+        width: 75%;
+        margin: 0 auto;
+
+        @include mq('md') {
+            width: 95%;
+        }
+        @include mq('xl') {
+            width: 75%;
+        }
+    }
+
+    &--address {
+        text-align: center;
+        img {
+            width: em(125px);
+            margin:2em auto 1em;
+            @include mq('xs') {
+                width: em(42px);
+                margin: 10px auto 12px;
+            }
+        }
+
+        p {
+            font-weight: $font-weight--sm;
+            font-size: em(15px);
+            @include mq('xs') {
+                font-size: em(14px);
+            }
+        }
+
+    }
+
+    &-contacts {
+        margin-top: em(50px);
+        border-radius: $br-radius;
+    }
+
+    &--map {
+        height: 100%;
+        overflow: hidden;
+        @include mq('xs') {
+            height: em(400px);
+        }
+    }
+
+    &--form {
+        background-color: $qpick__white;
+        padding: em(15px);
+        
+       @include mq('md') {
+        padding: em(30px);
+       }
+
+        h3 {
+            font-size: em(30px);
+            font-weight: $font-weight--xl;
+            margin-bottom: em(15px, 30px);
+        }
+
+        label {
+            font-weight: $font-weight--md;
+            font-size: em(17px);
+            display: block;
+            margin-bottom: em(10px, 17px);
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            border: none;
+            outline: none;
+            border: 1px solid $border;
+            padding: 8px 6px;
+            margin-bottom: 10px;
+        }
+
+        .btn {
+            width: 100%;
+            display: inline-block;
+            text-transform: uppercase;
+            font-size: em(20px);
+            font-weight: $font-weight--md;
+            @include mq('sm') {
+                width: em(200px);
+            }
+        }
+    }
+
+}
+
+// ====================================================================
+//                       CONTACT US OTHER PAGE
+// ====================================================================
+
+.qpick-contact {
+    position: relative;
+    @include mq('sm') {
+        height: em(600px);
+    }
+    margin-top: em(50px);
+    &--form {
+        @include mq('sm') {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: em(450px);
+        }
+    }
+
+    &--maps {
+        height: 100%;
+    }
+
+    &--mapframe {
+        width: 100%;
+        height: 100%;
+    }
+}

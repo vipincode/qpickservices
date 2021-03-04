@@ -1,0 +1,71 @@
+// Background color
+
+@mixin bg-colors($map) {
+	@each $theme, $color in $map {
+		&--#{$theme} {
+			background-color: $color;
+		}
+	}
+}
+
+// Adding psudo images
+
+@mixin before-images($width: null, $height: null) {
+	position: relative;
+	&::before {
+		display: block;
+		content: "";
+		width: $width;
+		height: $height;
+		position: absolute;
+		top: 4px;
+		@content;
+	}
+}
+
+// SWIPER ARROW STYLE
+
+@mixin arrows-prev($bg-color: null, $br-radius: null) {
+	background-color: $bg-color;
+	box-shadow: 0px 0px 10px 0px rgba($qpick__black, 0.35);
+	border-top-right-radius: $br-radius;
+	border-bottom-right-radius: $br-radius;
+}
+
+@mixin arrows-next($bg-color: null, $br-radius: null) {
+	background-color: $bg-color;
+	box-shadow: 0px 0px 10px 0px rgba($qpick__black, 0.35);
+	border-top-left-radius: $br-radius;
+	border-bottom-left-radius: $br-radius;
+}
+
+// Flexy
+
+@mixin flexy($disp: flex, $just: null, $wrap: null, $align: null, $dir: null) {
+	display: $disp;
+	flex-wrap: $wrap;
+	justify-content: $just;
+	align-items: $align;
+	flex-direction: $dir;
+}
+
+// Media Query
+
+@mixin mq($break) {
+	$value: map-get($breakpoints, $break);
+	$sm: map-get($breakpoints, 'sm');
+
+	@if $value == null {
+		@error "`#{$break}` is not a valid break point";
+	}
+	@else if $value < $sm {
+		@media(max-width: $value) {
+			@content;
+		}
+	}
+	@else {
+		@media(min-width: $value) {
+			@content;
+		}
+	}
+}

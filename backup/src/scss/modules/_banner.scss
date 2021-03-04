@@ -1,0 +1,106 @@
+// ==================================================
+//        SWIPER SETTINGS
+// ==================================================
+
+.swiper1 {
+    .banner {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: em(35px) 0px;
+
+        @include mq('xxl') {
+            height: em(600px);
+        }
+
+        article {
+            position: relative;
+            color: $qpick__accent;
+            z-index: 1;  
+            @include mq('xxl') {
+                margin-top: em(100px);
+            }
+
+            h1 {
+                font-size: em(25px);
+                text-transform: uppercase;
+                @include mq('xs') {
+                    margin-bottom: em(15px, 25px);
+                }
+                @include mq('md') {
+                    font-size: em(42px);
+                    margin-bottom: em(15px, 42px);
+                }
+                @include mq('lg') {
+                    font-size: em(52px);
+                    margin-bottom: em(25px, 52px);
+                }
+                @include mq('xl') {
+                    font-size: em(62px);
+                    margin-bottom: em(25px, 62px);
+                }
+            }
+
+            h2 {
+                font-size: em(25px);
+                font-weight: $font-weight--sm;
+                line-height: em(30px, 25px);
+                margin-bottom: em(15px, 25px);
+                @include mq('md') {
+                    font-size: em(42px);
+                    margin-bottom: em(15px, 42px);
+                    line-height: em(30px, 45px);
+                }
+                @include mq('lg') {
+                    font-size: em(62px);
+                    margin-bottom: em(35px, 62px);
+                    line-height: em(36px, 62px);
+                }
+            }
+
+            p {
+                font-size: em(14px);
+                font-weight: $font-weight--sm;
+                @include mq('lg') {
+                    font-size: em(18px);
+                }
+            }
+
+            .btn {
+                display: inline-block;
+                text-transform: uppercase;
+                margin-top: em(30px, 18px);
+            }
+
+            @include mq('lg') {
+                width: 85%;
+            }
+            @include mq('xl') {
+                width: 75%;
+            }
+        }
+
+        &::after {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            content: '';
+            display: block;
+            background-color: rgba($color: $qpick__black, $alpha: 0.35);
+        }
+
+    }
+
+    .swiper-pagination-bullet {
+        background-color: $qpick__accent;
+        opacity: 0.75;;
+    }
+
+    .swiper-pagination-bullet.swiper-pagination-bullet-active {
+        background-color: $qpick__white;
+    }
+}
+
+

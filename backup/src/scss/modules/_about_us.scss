@@ -1,0 +1,293 @@
+// ===============================================================
+//                   ABOUT US
+// ===============================================================
+
+.about-us__heading {
+    background-image: url('../../images/about.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 0;
+    padding: em(50px) 0;
+    position: relative;
+}
+
+.about-us__heading::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba($primary__color, 0.8), rgba($secondary__color, 0.8));
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.about-us {
+    &__heading {
+        h1 {
+            font-size: em(32px);
+            font-weight: $font-weight--xxl;
+            color: $qpick__accent;
+            margin: 0;
+            text-align: center;
+            text-shadow: 0 0 10px rgba($qpick__black, 0.5);
+            position: relative;
+            z-index: 9;
+            @include mq('md') {
+                font-size: em(62px);
+            }
+        }
+    }
+}
+
+#about_us {
+    margin: em(80px) 0px;
+}
+
+.about_us--col2 {
+    margin-top: em(50px);
+}
+
+.about_us {
+    &--images {
+        overflow: hidden;
+        transform-origin: 50% 50%;
+
+        img {
+            transition: transform 0.4s ease-in-out;
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+    &--text {
+        h1 {
+            font-size: em(22px);
+            font-weight: $font-weight--lg;
+            text-transform: uppercase;
+            color: $primary__color; 
+            &::after {
+                display: block;
+                content: '';
+                width: em(110px, 22px);
+                height: 2px;
+                margin-top: em(6px, 22px);
+                background-color: $primary__color;
+            }
+        }
+
+        h2 {
+            font-size: em(26px);
+            font-weight: $font-weight--xxl;
+            line-height: em(35px, 26px);
+            margin-bottom: em(15px, 26px);
+            @include mq('md') {
+                font-size: em(36px);
+                line-height: em(45px, 36px);
+                margin-bottom: em(15px, 36px);
+            }
+        }
+
+        p {
+            font-size: 17px;
+            line-height: em(30px, 17px);
+            @include mq('xs') {
+                margin-bottom: em(20px, 17px);
+            }
+        }
+    }
+}
+
+// =================================================================
+//                OUR PROMISE
+// =================================================================
+
+.about-prm {
+    margin-top: em(80px);
+   @include mq('lg') {
+       @include flexy($wrap: wrap);
+   }
+   &--items {
+       @include mq('lg') {
+           flex: 1 per-line(2);
+       }
+   }
+
+   &--right {
+       background: linear-gradient(90deg,rgba($primary__color, 1), rgba($secondary__color, 1));
+       padding: em(20px);
+       h2 {
+           color: $qpick__accent;
+       }
+       p {
+        color: $qpick__accent;
+       }
+   }
+
+}
+
+// =================================================================
+//                FAQS MAIN
+// =================================================================
+
+.about-faq {
+    padding: 100px 0;
+
+    @include mq('lg') {
+        width: 75%;
+        margin: 0 auto;
+    }
+
+    @include mq('xl') {
+        width: 60%;
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: em(50px, 32px);
+    }
+}
+
+.qpick-faq--tag {
+    padding: 60px 0px 35px;
+    @include mq('lg') {
+        width: 75%;;
+        margin: 0 auto;
+    }
+
+    h3 {
+        font-size: em(17px);
+        font-weight: $font-weight--lg;
+        margin-bottom: 0;
+    }
+
+    p {
+        font-weight: $font-weight--xs;
+        font-size: em(13px);
+        line-height: em(24px, 13px);
+        margin-bottom: em(15px, 13px);
+    }
+
+    ul {
+        margin-bottom: 50px;
+        li {
+            display: inline-block;
+            padding: 1px 10px;
+            color: $qpick__accent;
+            background-color: $primary__color;
+            font-size: em(12px);
+            line-height: em(21px, 12px);
+            font-weight: $font-weight--xs;
+            margin: 5px;
+            border-radius: 30px;
+            a {
+                color: $qpick__accent;
+                display: block;
+            }
+        }
+    }
+}
+
+// =========================================================================
+//               FOR ABOUT PAGE 
+// =========================================================================
+
+.about-faqs {
+    width: 94%;
+    margin: 80px auto 80px;
+    @include mq('lg') {
+        width: 80%;
+    }
+    @include mq('xl') {
+        width: 60%;
+        margin-top: em(160px);
+    }
+
+    h1 {
+        font-size: em(22px);
+        text-align: center;
+        font-weight: $font-weight--xl;
+        margin-bottom: em(25px, 22px);
+        @include mq('md') {
+            font-size: em(32px);
+            margin-top: em(50px, 32px);
+        }
+    }
+}
+
+#accordion {
+   h3 {
+       font-size: em(18px);
+       font-weight: $font-weight--sm;
+       position: relative;
+       &:focus {
+           outline: none;
+       }
+   }
+
+   p {
+       font-size: em(16px);
+       font-weight: $font-weight--xs;
+   }
+
+   ul {
+       margin-top: em(15px, 16px);
+       li {
+           font-size: em(16px);
+           font-weight: $font-weight--xs;
+           padding: 5px 0px;
+       }
+   }
+
+}
+
+// ================================================================
+//                 VISION
+// ================================================================
+
+.about-vision {
+    margin-top: em(80px);
+
+    &--items {
+        ul {
+            counter-reset: counters ;
+            @include mq(xs) {
+                margin-bottom: em(30px);
+            }
+            li {
+                display: block;
+                padding: 6px 0 0 45px;
+                line-height: em(30px, 16px);
+                font-weight: $font-weight--xs;
+                position: relative;
+                &::before {
+                    position: absolute;
+                    left: 0px;
+                    top: 10px;
+                    counter-increment: counters;
+                    content: counters(counters, ".") "";
+                    width: 32px;
+                    height: 32px;
+                    text-align: center;
+                    border-radius: $br-roundy;
+                    border: 1px solid $primary__color;
+                    color: $primary__color;
+                    font-weight: $font-weight--sm;
+                }
+            }
+        }
+
+        h2 {
+            font-weight: $font-weight--md;
+        }
+
+        p {
+            // font-size: em(18px);
+            font-weight: $font-weight--xs;
+            line-height: em(30px, 18px);
+        }
+
+    }
+}

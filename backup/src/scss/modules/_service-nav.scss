@@ -1,0 +1,75 @@
+// =====================================================================
+//                                SERVICES NAV
+// =====================================================================
+
+.service {
+    background: linear-gradient(90deg, $primary__color, $secondary__color);
+    padding: 15px 0px;
+
+    &-main {
+        ul {
+            @include flexy($wrap: wrap, $just: space-between);
+
+            li {
+                // flex: 0 1 per-line(12);
+                text-align: center;
+                a {
+                    color: $qpick__accent;
+                }
+
+                img {
+                    width: 24px;
+                    display: block;
+                    margin: 0 auto;
+
+                    @include mq('lg') {
+                        width: 26px;
+                    }
+
+                    @include mq('xl') {
+                        width: 29px;
+                    }
+
+                    @include mq('xxl') {
+                        width: 35px;
+                    }
+                }
+
+                .toggle-btn {
+                    img {
+                        width: 40px;
+
+                        @include mq('xl') {
+                            width: 50px;
+                        }
+                    }
+                }
+                
+                span {
+                    font-size: em(8px);
+                    display: block;
+                    margin-top: em(5px, 10px);
+                    @include mq('lg') {
+                        font-size: em(10px);
+                        margin-top: em(5px, 10px);
+                    }
+                    @include mq('xl') {
+                        font-size: em(13px);
+                        margin-top: em(5px, 13px);
+                    }
+                    @include mq('xxl') {
+                        font-size: em(17px);
+                        margin-top: em(5px, 17px);
+                    }
+                }
+            }
+
+        }
+    }
+
+    display: none;
+    @include mq('lg') {
+        display: block;
+    }
+
+}

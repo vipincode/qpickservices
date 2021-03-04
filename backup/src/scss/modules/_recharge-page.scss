@@ -1,0 +1,66 @@
+// ==================================================
+//        FORMS SETTINGS
+// ==================================================
+
+#banner {
+    position: relative;
+}
+
+.recharge {
+    position: absolute;
+    right: 12%;;
+    width: 270px;
+    top: 25%;
+    z-index: 99;
+    background-color: $qpick__white;
+    padding: em(15px);
+    border-radius: $br-radius;
+    border: 3px solid rgba($color: $qpick__black, $alpha: 0.13);
+    box-shadow: 0 0 30px 1px rgba($color: $qpick__black, $alpha: 0.15);
+
+    form {
+        input[type="text"] {
+            width: 100%;
+            border: none;
+            border-bottom: 1px solid $border;
+            outline: none;
+            font-size: em(13px);
+            padding: 8px 4px;
+            font-weight: $font-weight--sm;
+            color: $qpick__black;
+            margin-bottom: em(10px, 13px);
+        }
+    }
+
+    .rch-browse {
+        h3 {
+            font-size: em(15px);
+            font-weight: $font-weight--lg;
+            margin-top: em(10px, 15px);
+            line-height: em(18px, 15px);
+            span {
+                font-weight: $font-weight--sm;
+                font-size: em(12px);
+                color: $secondary__color;
+            }
+        }
+    }
+
+}
+
+// ==================================================
+//        CHECKBOX CUSTOMIZATION
+// ==================================================
+
+.pretty .state label {
+    font-size: 14px;
+}
+
+.pretty .state label:before, 
+.pretty .state label:after {
+    top: calc((0% - (100% - 1.2em)) - 7%);
+}
+
+.pretty.p-default input:checked ~ .state label:after {
+    background-color: $secondary__color !important;
+}

@@ -1,0 +1,269 @@
+// =======================================================
+//               SIGN IN / SIGN UP
+// =======================================================
+.login {
+    width: 100%;
+    margin: 0 auto;
+    @include mq('lg') {
+        height: 100vh;
+    }
+    &-slider {
+        overflow: hidden;
+        height: 400px;
+
+        @include mq('md') {
+            height: 62vh;
+        }
+        @include mq('lg') {
+            height: 100vh;
+        }
+        background-color: $qpick__accent;
+
+        &--items {
+            position: relative;
+           
+            img {
+                transform: translateY(-120px);
+              
+                @include mq('lg') {
+                    height: 100vh;
+                    object-fit: cover;
+                }
+                @include mq('xl') {
+                    transform: translateY(0px);
+                    height: auto;
+                }
+            }
+
+            article {
+                position: absolute;
+                top: 15%;
+                left: 15px;
+                width: 90%;
+                @include mq('md') {
+                    top: 15%;
+                    left: 30px;
+                    width: 86%;
+                }
+
+                h2 {
+                    color: $qpick__accent;
+                    font-size: em(32px);
+                    font-weight: $font-weight--xl;
+                    line-height: em(30px, 32px);
+                    margin-bottom: em(20px, 32px);
+                    text-shadow: 1px 1px 10px rgba($qpick__black, 0.5);
+                    @include mq('md') {
+                        font-size: em(50px);
+                        line-height: em(58px, 62px);
+                        margin-bottom: em(20px, 62px);
+                    }
+                }
+                p {
+                    color: $qpick__accent;
+                    font-size: em(18px);
+                    line-height: em(30px, 18px);
+                    text-shadow: 1px 1px 10px rgba($qpick__black, 0.5);
+                    @include mq('md') {
+                        font-size: em(24px);
+                        font-weight: $font-weight--md;
+                        margin-top: em(30px, 24px);
+                    }
+                }
+            }
+        }
+    }
+    &-main {
+        padding-top: em(25px);
+        position: relative;
+
+        @include flexy($just: center, $align: center);
+
+        @include mq('lg') {
+            padding-top: em(120px);
+        }
+
+        @include mq('xl') {
+            padding: em(50px);
+            height: 100vh;
+        }
+    }
+    &-signin {
+        padding: 20px;
+        width: em(350px);
+
+        label {
+            display: block;
+            font-size: em(16px);
+            text-transform: uppercase;
+            font-weight: $font-weight--lg;
+            margin-bottom: em(15px, 20px);
+        }
+
+        input {
+            width: 100%;
+            outline: 0;
+            border: 0;
+            padding: 8px 15px;
+            font-size: em(18px);
+            margin-bottom: em(15px, 20px);
+            line-height: em(28px, 18px);
+            font-weight: $font-weight--sm;
+            background-color: transparent;
+            border: 1px solid $border;
+            border-radius: $br-radius;
+
+        }
+
+        .btn--signin {
+            background-color: $qpick__black;
+            color: $qpick__accent;
+            box-shadow: 0 0 10px 0px rgba($qpick__black, 0.36);
+            padding: 8px 30px;
+            font-size: em(16px);
+            line-height: em(28px, 16px);
+            font-weight: $font-weight--lg;
+            text-transform: uppercase;
+        }
+
+        span {
+            display: block;
+            font-size: 14px;
+            font-weight: $font-weight--xs;
+            margin-top: em(50px, 14px);
+            a {
+                display: inline-block;
+                color: $qpick__blue;
+            }
+        }
+    }
+    &-switcher{
+        position: absolute;
+        top: em(6px);
+        right: em(10px);
+
+        @include flexy();
+
+        @include mq('lg') {
+            top: em(30px);
+            right: em(50px);
+        }
+
+        .switcher-signin {
+            cursor: pointer;
+            padding: 7px 15px;
+            border: none;
+            outline: none;
+            border-top-left-radius: 30px;
+            border-bottom-left-radius: 30px;
+            font-size: em(14px);
+            line-height: em(25px, 14px);
+            text-transform: uppercase;
+            text-align: center;
+            background-color:$qpick__accent;
+            color: $qpick__black;
+            box-shadow: 0 0 7px 0px rgba($qpick__black, 0.26);
+        }
+        .switcher-signup {
+            cursor: pointer;
+            padding: 7px 15px;
+            border: none;
+            outline: none;
+            border-top-right-radius: 30px;
+            border-bottom-right-radius: 30px;
+            font-size: em(14px);
+            line-height: em(25px, 14px);
+            text-transform: uppercase;
+            text-align: center;
+            background-color: $qpick__accent;
+            box-shadow: 0 0 7px 0px rgba($qpick__black, 0.26);
+        }
+
+        .switcher--active {
+            background-color: $qpick__black;
+            color: $qpick__accent;
+            transition: background-color 0.4s ease-in-out, color 0.3s ease-in;
+        }
+    }
+
+    &-signup {
+        padding: 20px;
+        width: em(350px);
+        display: none;
+        label {
+            display: block;
+            font-size: em(14px);
+            text-transform: uppercase;
+            font-weight: $font-weight--lg;
+            margin-bottom: em(8px, 14px);
+        }
+
+        input {
+            width: 100%;
+            outline: 0;
+            border: 0;
+            padding: 8px 15px;
+            font-size: em(17px);
+            margin-bottom: em(15px, 20px);
+            line-height: em(28px, 18px);
+            font-weight: $font-weight--sm;
+            background-color: transparent;
+            border: 1px solid $border;
+            border-radius: $br-radius;
+        }
+
+        .btn--signin {
+            background-color: $qpick__black;
+            color: $qpick__accent;
+            box-shadow: 0 0 10px 0px rgba($qpick__black, 0.36);
+            padding: 8px 30px;
+            outline: none;
+            font-size: em(16px);
+            line-height: em(28px, 16px);
+            font-weight: $font-weight--lg;
+            text-transform: uppercase;
+        }
+
+        span {
+            display: block;
+            font-size: 14px;
+            font-weight: $font-weight--xs;
+            margin-top: em(20px, 14px);
+            a {
+                display: inline-block;
+                color: $qpick__blue;
+            }
+        }
+    }
+}
+
+.js-toggle--sign {
+    display: block;
+    animation: fadeTopToBottom 0.6s ease-in-out;
+}
+
+.js-Close-sign {
+    display: none;
+    animation: fadeTopToBottom 0.6s ease-in-out;
+}
+
+@keyframes fadeTopToBottom {
+    0% {
+        margin-top: -100%;
+        opacity: 0.3;
+    }
+    100% {
+        margin-top: 0;
+        opacity: 1;
+    }
+}
+
+// =================================================================
+//           CAROUSEL
+// =================================================================
+
+.swiper5 {
+    .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+        background-color: $qpick__red;
+    }
+}

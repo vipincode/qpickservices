@@ -1,0 +1,94 @@
+// ================================================================================
+//                                GALLERY
+// ================================================================================
+
+#gallery {
+    margin-top: em(20px);
+    @include mq('xs') {
+        margin-top: em(35px);
+    }
+}
+
+.gallery {
+    &-card {
+        margin-top: em(50px);
+        position: relative;
+    }
+
+    &-text {
+        position: absolute;
+        top: em(-16px);
+        left: 0;
+        right: 0;
+        padding: em(15px);
+        color: $qpick__white;
+
+        @include mq('lg') {
+            top: em(16px);
+        }
+
+        @include mq('xl') {
+            top: em(-16px);
+        }
+
+        h3 {
+            font-size: em(20px);
+            font-weight: $font-weight--md;
+            line-height: em(35px, 20px);
+            margin-top: em(15px, 20px);
+            margin-bottom: 0;
+        }
+
+        p {
+            font-size: em(14px);
+            font-weight: $font-weight--xs;
+        }
+
+        .btn {
+            display: inline-block;
+            font-size: em(14px);
+            font-weight: $font-weight--sm;
+            text-transform: uppercase;
+            @include mq('xs') {
+                padding: 5px 12px;
+            }
+        }
+    }
+}
+
+.swiper3 {
+    height: em(250px);
+    @include mq('lg') {
+        height: em(300px);
+    }
+    @include mq('xl') {
+        height: em(250px);
+    }
+    .swiper-button-prev, 
+    .swiper-container-rtl .swiper-button-next {
+        left: auto;
+        right: 66px;
+        top: 24px;
+    } 
+
+    .swiper-button-next, 
+    .swiper-container-rtl .swiper-button-prev {
+        right: 10px;
+        left: auto;
+        top: 24px;
+    }
+
+    .swiper-button-prev:after, 
+    .swiper-button-next:after {
+        font-size: em(16px);
+        background-color: $qpick__black;
+        color: $qpick__white;
+        padding: 4px 20px;
+    }
+
+    .swiper-pagination-bullet-active {
+        background-color: $primary__color;
+    }
+
+}
+

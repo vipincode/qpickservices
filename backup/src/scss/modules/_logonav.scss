@@ -1,0 +1,147 @@
+// ==========================================================
+//             BOTTOM NAV 
+// ==========================================================
+
+.botton-nav {
+    background-color: $qpick__white;
+    nav {
+        padding: 5px 0px;
+
+        @include mq('xs') {
+            padding: 15px 0 0;
+        }
+
+        ul {
+            li {
+                display: block;
+                @include mq('md') {
+                    display: inline-block;
+                    margin-left: em(15px);
+                }
+            }
+    
+            a {
+                display: block;
+                font-size: em(14px);
+                font-weight: $font-weight--lg;
+                color: $qpick__black;
+                padding: 7px 0px;
+                transition: color 0.4s ease-in-out;
+                &:hover {
+                    color: $secondary__color;
+                }
+
+                @include mq('lg') {
+                    font-size: em(16px);
+                }
+
+                @include mq('xl') {
+                    font-size: em(17px);
+                }
+            }
+
+            display: none;
+
+            @include mq('lg') {
+                display: block;
+            }
+        }
+
+        form {
+            input[type="text"] {
+                border: none;
+                outline: none;
+                border-bottom: 1px solid $border;
+                padding: 10px 10px 10px 30px;
+                width: 100%;
+                background-image: url('../../images/search-icon.png');
+                background-repeat: no-repeat;
+                background-size: 21px 21px;
+                background-position: 7px 8px;
+
+                &::placeholder {
+                    color: $border;
+                }
+
+                @include mq('xs') {
+                    margin-bottom: em(20px, 14px);
+                }
+
+                @include mq('md') {
+                    width: em(260px, 14px);
+                    font-size: em(14px);
+                }
+
+                @include mq('lg') {
+                    width: em(270px, 14px);
+                }
+
+                @include mq('xl') {
+                    width: em(500px);
+                    margin-left: em(100px, 14px);
+                }
+            }
+        }
+
+        @include mq('md') {
+            @include flexy($just: space-between, $align: center);
+        }
+
+        .site-logo {
+            display: inline-block;
+            img {
+                @include mq('xs') {
+                    width: em(145px);
+                    margin-bottom: em(15px);
+                }
+                @include mq('md') {
+                    width: em(145px);
+                }
+                @include mq('xl') {
+                    width: auto;
+                }
+            }
+        }
+
+    }
+}
+
+// ==========================================================
+//             SEARCH AUTO COMPLETE
+// ==========================================================
+
+.ui-autocomplete {
+    background-color: $qpick__white;
+    z-index: 99;
+    padding: em(10px); 
+    li {
+        padding: 6px 0px;
+    }
+}
+
+// ==========================================================
+//             STICK NAVIGATION BAR 
+// ==========================================================
+
+.js--is__sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background: $qpick__accent;
+    z-index: 999;
+    box-shadow: 0 0 22px -5px rgb(0 0 0 / 52%);
+    animation: fadeToTop 0.5s ease-in-out;
+}
+
+@keyframes fadeToTop {
+    from {
+        opacity: 0.5;
+        margin-top: -100px;
+    } 
+    to {
+        opacity: 1;
+        margin-top: 0px;
+    }
+}

@@ -1,0 +1,108 @@
+// =============================================================
+//                  TERMS & CONDITION
+// =============================================================
+
+#terms {
+    margin: 80px 0px;
+}
+
+.terms {
+    @include flexy($wrap: wrap);
+
+    &--tab {
+        @include mq('lg') {
+            flex-basis: 25%;
+        }
+        .trm-vbtn {
+            width: 100%;
+            background-color: transparent;
+            outline: none;
+            border: none;
+            cursor: pointer;
+            font-size: em(17px);
+            font-weight: $font-weight--md;
+            text-align: left;
+            margin-bottom: em(20px, 17px);
+            text-transform: capitalize;
+        }
+        .trm-vbtn.active {
+            color: $primary__color;
+            border-right: 2px solid $primary__color;
+        }
+    }
+    
+    &--content {
+        padding: em(15px);
+        @include mq('lg') {
+            padding-left: 30px;
+            padding-top: 0;
+            flex-basis: 75%;
+        }
+    }
+}
+
+.tabcontent {
+    display: none;
+    h2 {
+        font-size: em(21px);
+        font-weight: $font-weight--xl;
+        @include mq(lg){
+            font-size: em(26px);
+        }
+    }
+
+    h3 {
+        font-size: em(18px);
+        font-weight: $font-weight--xl;
+        margin-top: em(20px, 18px);
+        margin-bottom: em(10px, 18px);
+        @include mq('lg') {
+            font-size: em(20px);
+            margin-top: em(20px, 20px);
+            margin-bottom: em(10px, 20px);
+        }
+    }
+
+    h4 {
+        font-size: em(17px);
+        font-weight: $font-weight--xl;
+        margin-top: em(20px, 17px);
+        margin-bottom: em(10px, 17px);
+        @include mq('lg') {
+            font-size: em(18px);
+            margin-top: em(20px, 18px);
+            margin-bottom: em(10px, 18px);
+        }
+    }
+
+    p {
+        margin-bottom: em(6px, 16px);
+        line-height: em(30px, 16px);
+        strong {
+            font-weight: $font-weight--lg;
+        }
+    }
+}
+
+.tabcontent.toggle {
+    display: block;
+}
+
+.policies {
+    background: url('../../images/policy.jpg') no-repeat 0 0 / cover;
+    padding: 30px 20px;
+    color: #fff;
+
+    h1 {
+        font-size: em(32px);
+        font-weight: $font-weight--xxl;
+        text-shadow: 0 0 10px rgba($qpick__black, 0.6);
+        color: $qpick__accent;
+        margin-top: em(20px, 32px);
+        text-align: center;
+        @include mq('lg') {
+            font-size: em(52px);
+            margin-top: em(20px, 52px);
+        }
+    }
+}

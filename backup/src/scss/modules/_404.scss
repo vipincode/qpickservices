@@ -1,0 +1,48 @@
+// ===============================================================
+//                  404 PAGE
+// ===============================================================
+
+#page-not-found {
+    // background-color: lighten($color: $secondary__color, $amount: 15%);
+    padding: 5px;
+    @include mq('lg') {
+        padding: em(80px);
+        height: em(500px);
+    }
+    article {
+        h1 {
+            font-size: em(42px);
+            font-weight: $font-weight--xxl;
+            line-height: em(45px, 42px);
+            @include mq('lg') {
+                font-size: em(65px);
+                line-height: em(66px, 65px);
+            }
+        }
+
+        p {
+            font-size: em(20px);
+            line-height: em(32px, 20px);
+            font-weight: $font-weight--md;
+            @include mq('lg') {
+                font-size: em(28px);
+                line-height: em(36px, 28px);
+            }
+        }
+
+        .btn {
+            display: inline-block;
+            font-weight: 400;
+            text-transform: uppercase;
+        }
+
+        .btn + .btn {
+            margin-left: 20px;
+        }
+
+        .btn--info {
+            color: $qpick__black;
+        }
+
+    }
+}
